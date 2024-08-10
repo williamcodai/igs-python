@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IGS Page</title>
+    <style>
+        .color-I {
+            background-color: lightblue;
+        }
+        .color-G {
+            background-color: lightgreen;
+        }
+        .color-S {
+            background-color: lightpink;
+        }
+    </style>
+</head>
+<body>
+    <h1>IGS List</h1>
+    <ul>
+        {% for item in data %}
+            <li class="{% if item == 'I' %}color-I{% elif item == 'G' %}color-G{% else %}color-S{% endif %}">
+                {{ item }}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
